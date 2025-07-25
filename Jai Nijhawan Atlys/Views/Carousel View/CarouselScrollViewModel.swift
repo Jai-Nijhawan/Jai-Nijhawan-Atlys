@@ -1,5 +1,5 @@
 //
-//  AtlysCarouselViewModel.swift
+//  CarouselScrollViewModel.swift
 //  Jai Nijhawan Atlys
 //
 //  Created by Jai Nijhawan on 25/07/25.
@@ -9,7 +9,7 @@ import SwiftUI
 import Combine
 
 @MainActor
-class AtlysCarouselViewModel: ObservableObject {
+class CarouselScrollViewModel: ObservableObject {
     
     // MARK: - Published Properties
     @Published var carouselData: [CarouselItemData] = []
