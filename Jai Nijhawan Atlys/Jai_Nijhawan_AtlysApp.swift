@@ -11,7 +11,7 @@ import SwiftUI
 struct Jai_Nijhawan_AtlysApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView()
         }
     }
 }
