@@ -12,5 +12,4 @@ struct CarouselItemData: Identifiable {
     let systemName: String
     let color: Color
     let title: String
-    var isScaled: Bool
 }

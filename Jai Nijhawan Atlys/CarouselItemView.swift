@@ -29,7 +29,6 @@ struct CarouselItemView: View {
                         .foregroundColor(.white)
                 }
             }
-            .zIndex(data.isScaled ? 1 : 0)
             .scaleEffect(scale)
         }
         .frame(width: 280, height: 280)
@@ -45,14 +44,8 @@ struct CarouselItemView: View {
 }
 
 #Preview {
-    ContentView()
-}
-
-
-#Preview {
     CarouselItemView(data: CarouselItemData(id: 0,
                                             systemName: "star.fill",
                                             color: Color.orange,
-                                            title: "Jai",
-                                            isScaled: true))
+                                            title: "Jai"))
 }

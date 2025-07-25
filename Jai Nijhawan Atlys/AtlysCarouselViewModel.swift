@@ -17,9 +17,9 @@ class AtlysCarouselViewModel: ObservableObject {
     
     // MARK: - Private Properties
     private let initialCarouselData: [CarouselItemData] = [
-        CarouselItemData(id: 0, systemName: "photo.fill", color: .cyan, title: "Dubai", isScaled: false),
-        CarouselItemData(id: 1, systemName: "heart.fill", color: .pink, title: "Malaysia", isScaled: false),
-        CarouselItemData(id: 2, systemName: "star.fill", color: .yellow, title: "Thailand", isScaled: false)
+        CarouselItemData(id: 0, systemName: "photo.fill", color: .cyan, title: "Dubai"),
+        CarouselItemData(id: 1, systemName: "heart.fill", color: .pink, title: "Malaysia"),
+        CarouselItemData(id: 2, systemName: "star.fill", color: .yellow, title: "Thailand")
     ]
     
     // MARK: - Computed Properties
@@ -36,7 +36,6 @@ class AtlysCarouselViewModel: ObservableObject {
         func setupInitialData() {
         carouselData = initialCarouselData
         currentIndex = middleIndex
-        updateScaledState(for: currentIndex)
     }
     
     func updateCurrentIndex(newIndex: Int) {
@@ -44,15 +43,6 @@ class AtlysCarouselViewModel: ObservableObject {
         
         withAnimation(.easeInOut(duration: 0.3)) {
             currentIndex = newIndex
-            updateScaledState(for: newIndex)
         }
     }
-    
-    
-    // MARK: - Private Methods
-    private func updateScaledState(for index: Int) {
-        for i in carouselData.indices {
-            carouselData[i].isScaled = (i == index)
-        }
-    }
-} 
+}
