@@ -9,7 +9,6 @@ import SwiftUI
 
 struct CarouselItemData: Identifiable {
     let id: Int
-    let systemName: String
-    let color: Color
     let title: String
+    let imageName: String
 }

@@ -17,9 +17,9 @@ class AtlysCarouselViewModel: ObservableObject {
     
     // MARK: - Private Properties
     private let initialCarouselData: [CarouselItemData] = [
-        CarouselItemData(id: 0, systemName: "photo.fill", color: .cyan, title: "Dubai"),
-        CarouselItemData(id: 1, systemName: "heart.fill", color: .pink, title: "Malaysia"),
-        CarouselItemData(id: 2, systemName: "star.fill", color: .yellow, title: "Thailand")
+        CarouselItemData(id: 0, title: "Thailand", imageName: "thailand_cover_Normal"),
+        CarouselItemData(id: 1, title: "Malaysia", imageName: "malaysia_cover_Normal"),
+        CarouselItemData(id: 2, title: "Dubai", imageName: "uae_cover_Normal")
     ]
     
     // MARK: - Computed Properties
@@ -39,10 +39,9 @@ class AtlysCarouselViewModel: ObservableObject {
     }
     
     func updateCurrentIndex(newIndex: Int) {
-        guard newIndex != currentIndex && newIndex >= 0 && newIndex < carouselData.count else { return }
-        
-        withAnimation(.easeInOut(duration: 0.3)) {
-            currentIndex = newIndex
-        }
+        guard newIndex != currentIndex && newIndex >= 0
+                && newIndex < carouselData.count else { return }
+        currentIndex = newIndex
     }
 }
+
