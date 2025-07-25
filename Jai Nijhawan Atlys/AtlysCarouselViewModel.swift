@@ -13,15 +13,13 @@ class AtlysCarouselViewModel: ObservableObject {
     
     // MARK: - Published Properties
     @Published var carouselData: [CarouselItemData] = []
-    @Published var currentIndex: Int = 0
+    @Published var currentIndex: Int = 1
     
     // MARK: - Private Properties
     private let initialCarouselData: [CarouselItemData] = [
         CarouselItemData(id: 0, systemName: "photo.fill", color: .cyan, title: "Dubai", isScaled: false),
         CarouselItemData(id: 1, systemName: "heart.fill", color: .pink, title: "Malaysia", isScaled: false),
-        CarouselItemData(id: 2, systemName: "star.fill", color: .yellow, title: "Thailand", isScaled: false), // Will be set to true in setupInitialData
-        CarouselItemData(id: 3, systemName: "moon.fill", color: .purple, title: "Singapore", isScaled: false),
-        CarouselItemData(id: 4, systemName: "sun.max.fill", color: .orange, title: "Japan", isScaled: false)
+        CarouselItemData(id: 2, systemName: "star.fill", color: .yellow, title: "Thailand", isScaled: false)
     ]
     
     // MARK: - Computed Properties
